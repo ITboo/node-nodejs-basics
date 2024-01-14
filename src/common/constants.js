@@ -1,0 +1,1 @@
+export const FS_ERROR_MSG = 'FS operation failed';
