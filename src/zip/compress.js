@@ -8,16 +8,16 @@ const filePath = getPath(import.meta.url, 'files', 'fileToCompress.txt');
 const archivePath = getPath(import.meta.url, 'files', 'archive.gz');
 
 const compress = async () => {
-  try {
-    const fileToCompress = createReadStream(filePath);
-    const gzip = createGzip();
-    const archive = createWriteStream(archivePath);
+    try {
+        const fileToCompress = createReadStream(filePath);
+        const gzip = createGzip();
+        const archive = createWriteStream(archivePath);
 
-    fileToCompress.pipe(gzip).pipe(archive);
-    console.log('File has been successfully compressed!')
-  } catch {
-    throw new Error(ZLIB_ERROR_MSG);
-  }
+        fileToCompress.pipe(gzip).pipe(archive);
+        console.log('File has been successfully compressed!')
+    } catch {
+        throw new Error(ZLIB_ERROR_MSG);
+    }
 };
 
 await compress();
