@@ -14,6 +14,55 @@ It covers working with such Node.js built-in modules:
 
 ## HOW TO RUN
 
+1. Clone this repo
+
+`git clone https://github.com/ITboo/node-nodejs-basics.git`
+
+2. Go to cloned directory
+
+`cd node-nodejs-basics`
+
+3. Switch to dev branch
+
+`git checkout dev`
+
+4. Run scripts to explore subtask implementing
+(for npm users)
+
+`npm run cli:args`
+
+`npm run cli:env`
+
+`npm run cp`
+
+`npm run fs:copy`
+
+`npm run fs:create`
+
+`npm run fs:delete`
+
+`npm run fs:list`
+
+`npm run fs:read`
+
+`npm run fs:rename`
+
+`npm run hash`
+
+`npm run modules`
+
+`npm run streams:read`
+
+`npm run streams:transform`
+
+`npm run streams:write`
+
+`npm run wt`
+
+`npm run zip:compress`
+
+`npm run zip:decompress`
+
 ## DESCRIPTION
 
 ### File system (src/fs)
