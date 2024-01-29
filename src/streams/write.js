@@ -4,7 +4,9 @@ import { stdin } from 'process';
 import { getPath } from '../common/helpers.js';
 import { FS_ERROR_MSG } from '../common/constants.js';
 
-const path = getPath(import.meta.url, 'files', 'fileToWrite.txt');
+const DIR ='files';
+const FILE_NAME = 'fileToWrite.txt';
+const path = getPath(import.meta.url, DIR, FILE_NAME);
 
 const write = async () => {
     const stream = createWriteStream(path);

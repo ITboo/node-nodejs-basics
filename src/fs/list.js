@@ -3,7 +3,8 @@ import { readdir } from 'fs/promises';
 import { getPath } from '../common/helpers.js';
 import { FS_ERROR_MSG } from '../common/constants.js';
 
-const path = getPath(import.meta.url, 'files');
+const DIR = "files";
+const path = getPath(import.meta.url, DIR);
 
 const list = async () => {
   try {

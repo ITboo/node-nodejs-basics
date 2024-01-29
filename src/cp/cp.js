@@ -2,7 +2,9 @@ import { fork } from 'child_process';
 
 import { getPath } from '../common/helpers.js';
 
-const cpPath = getPath(import.meta.url, 'files', 'script.js');
+const DIR ='files';
+const FILE_NAME = 'script.js';
+const cpPath = getPath(import.meta.url, DIR, FILE_NAME);
 
 const spawnChildProcess = async (args) => {
     fork(cpPath, args);

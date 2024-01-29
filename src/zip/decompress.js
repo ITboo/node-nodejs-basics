@@ -4,8 +4,12 @@ import { createUnzip } from 'zlib';
 import { getPath } from '../common/helpers.js';
 import { ZLIB_ERROR_MSG } from '../common/constants.js';
 
-const filePath = getPath(import.meta.url, 'files', 'fileToCompress.txt');
-const archivePath = getPath(import.meta.url, 'files', 'archive.gz');
+const DIR = 'files';
+const FILE_NAME = 'fileToCompress.txt';
+const ARCHIVE_NAME = 'archive.gz';
+
+const filePath = getPath(import.meta.url, DIR, FILE_NAME);
+const archivePath = getPath(import.meta.url, DIR, ARCHIVE_NAME);
 
 const decompress = async () => {
     try {

@@ -4,8 +4,9 @@ import { readFile } from 'fs/promises';
 import { getPath } from '../common/helpers.js';
 import { FS_ERROR_MSG } from '../common/constants.js';
 
-const name = 'fileToCalculateHashFor.txt';
-const path = getPath(import.meta.url, 'files', name);
+const DIR = 'files';
+const FILE_NAME = 'fileToCalculateHashFor.txt';
+const path = getPath(import.meta.url, DIR , FILE_NAME);
 
 const calculateHash = async () => {
     try {

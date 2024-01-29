@@ -4,7 +4,8 @@ import { Worker } from 'worker_threads';
 import { getPath } from '../common/helpers.js';
 
 const cpusNum = cpus().length;
-const path = getPath(import.meta.url, 'worker.js');
+const FILE_NAME ='worker.js'
+const path = getPath(import.meta.url, FILE_NAME);
 const startsFrom = 10;
 
 const createWorkers = (num, path, startsFrom) => {

@@ -3,7 +3,9 @@ import { rm } from 'fs/promises';
 import { getPath } from '../common/helpers.js';
 import { FS_ERROR_MSG } from '../common/constants.js';
 
-const path = getPath(import.meta.url, 'files', 'fileToRemove.txt');
+const DIR = "files";
+const FILENAME = "fileToRemove.txt";
+const path = getPath(import.meta.url, DIR, FILENAME);
 
 const remove = async () => {
     try {

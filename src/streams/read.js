@@ -4,7 +4,9 @@ import { stdout } from 'process';
 import { getPath } from '../common/helpers.js';
 import { FS_ERROR_MSG } from '../common/constants.js';
 
-const path = getPath(import.meta.url, 'files', 'fileToRead.txt');
+const DIR ='files';
+const FILE_NAME = 'fileToRead.txt';
+const path = getPath(import.meta.url, DIR, FILE_NAME);
 
 const read = async () => {
     const stream = createReadStream(path);
